@@ -1,5 +1,5 @@
 import data from "../data.json";
-import {} from "../icons";
+import { htmlIcon, cssIcon, jsIcon, accessibilityIcon } from "../quizIcons";
 import { useState, useContext, createContext } from "react";
 import type { SetStateAction, Dispatch, ReactNode } from "react";
 
@@ -34,23 +34,12 @@ export default function QuizProvider({ children }: { children: ReactNode }) {
     const [selectedQuiz, setSelectedQuiz] = useState<Quiz | null>(null);
     const [score, setScore] = useState<number>(0);
     const [quizComplete, setQuizComplete] = useState<boolean>(false);
-    const [icons] = useState<Record<string, string>>(() => {
-        const iconObject: Record<string, string> = {};
-
-        quizData.quizzes.forEach(quiz => {
-            const fileName = quiz.icon.split("images/")[1];
-            
-            if (import.meta.env.PROD) {
-                iconObject[quiz.title] = `${import.meta.env.BASE_URL}assets/${fileName}`;
-            }
-
-            if (import.meta.env.DEV) {
-                iconObject[quiz.title] = `/src/assets/images/${fileName}`;
-            }
-        });
-
-        return iconObject;
-    });
+    const icons = {
+        html: htmlIcon,
+        css: cssIcon,
+        javascript: jsIcon,
+        accessibility: accessibilityIcon
+    }
 
     return (
         <QuizContext.Provider value={{ 
@@ -58,10 +47,10 @@ export default function QuizProvider({ children }: { children: ReactNode }) {
             selectedQuiz,
             score, 
             quizComplete,
+            icons,
             setSelectedQuiz,
             setScore,
-            setQuizComplete,
-            icons
+            setQuizComplete
         }}>
             { children }
         </QuizContext.Provider>
