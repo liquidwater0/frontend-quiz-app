@@ -21,7 +21,7 @@ export default function QuizSelectDisplay() {
             </div>
             
             <ul>
-                {quizData.quizzes.map((quiz: any) => (
+                {quizData.quizzes.map(quiz => (
                     <li key={quiz.title}>
                         <OptionButton 
                             className="quiz-select-button"
