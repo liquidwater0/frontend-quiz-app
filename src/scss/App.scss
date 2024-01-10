@@ -1,0 +1,71 @@
+@use "./font" as *;
+@use "./theme" as *;
+@use "./variables" as *;
+@use "./utilities" as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", Arial;
+}
+
+body {
+    font-size: $fs-body-small;
+    padding: 5rem;
+    padding-top: 0 !important;
+    background-color: var(--theme-background-100);
+    color: var(--theme-text-100);
+    line-height: 150%;
+}
+
+#root {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    height: 100%;
+
+    .theme-switch-container {
+        display: flex;
+        gap: 1rem;
+        margin-left: auto;
+        cursor: pointer;
+    }
+}
+
+h1, h2, h3 {
+    line-height: 100%;
+}
+
+h1 { font-size: $fs-large }
+h2 { font-size: $fs-medium }
+h3 { font-size: $fs-small }
+
+@media (max-width: 870px) {
+    header {
+        padding: 3rem 0;
+    }
+
+    body {
+        padding: 4rem;
+    }
+}
+
+@media (max-width: 525px) {
+    header {
+        padding-top: 1rem;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    h1 { font-size: 2.5rem }
+    h2 { font-size: 1.25rem }
+    h3 { font-size: 1.125rem }
+}

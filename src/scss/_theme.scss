@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+html[data-theme="dark"] {
+    --theme-background-100: #{$color-dark-navy};
+    --theme-background-200: #{$color-navy};
+    --theme-text-100: #{$color-white};
+    --theme-text-200: #{$color-light-blue};
+    --shadow-color: #{$color-dark-navy};
+}
+
+html[data-theme="light"] {
+    --theme-background-100: #{$color-light-gray};
+    --theme-background-200: #{$color-white};
+    --theme-text-100: #{$color-dark-navy};
+    --theme-text-200: #{$color-gray-navy};
+    --shadow-color: #{$color-light-blue};
+}

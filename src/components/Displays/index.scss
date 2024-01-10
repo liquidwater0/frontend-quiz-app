@@ -1,0 +1,140 @@
+@use "../../scss/variables" as *;
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+
+    .subtitle {
+        color: var(--theme-text-200);
+        font-style: italic;
+        line-height: 150%;
+    }
+
+    & > div, ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    & > ul {
+        list-style: none;
+
+        li {
+            display: grid;
+        }
+    }
+}
+
+.quiz-select-display {
+    .welcome-title {
+        margin-bottom: 3rem;
+    }
+}
+
+.question-display {
+    .question-title {
+        margin-top: 2rem;
+    }
+
+    .question-progress {
+        margin-top: auto;
+        margin-bottom: 7rem;
+    }
+
+    .submit-error {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.3rem;
+
+        .error-message {
+            color: $color-red;
+            font-size: $fs-body-medium;
+        }
+    }
+}
+
+.score-display {
+    .score-card {
+        display: grid;
+        place-items: center;
+        background-color: var(--theme-background-200);
+        border-radius: 2rem;
+        padding: 3rem 0;
+
+        .score {
+            font-size: $fs-display;
+            margin: 5rem 0;
+        }
+
+        .subtitle {
+            font-style: normal;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    section {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .quiz-select-display {
+        .welcome-title {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .question-display {
+        gap: 0;
+
+        .question-title {
+            margin: 1.5rem 0;
+        }
+    
+        .question-progress {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+@media (max-width: 525px) {
+    section {
+        gap: 2.5rem;
+    }
+
+    .quiz-select-display {
+        .welcome-title {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .question-display {
+        .question-title {
+            margin: 1rem 0;
+        }
+    
+        .question-progress {
+            margin-bottom: 2.25rem;
+        }
+
+        .submit-error {
+            margin-top: 1rem;
+
+            .error-message {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    .score-display {
+        .score {
+            font-size: 5.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+        }
+    }
+}

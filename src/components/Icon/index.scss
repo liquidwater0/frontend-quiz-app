@@ -1,0 +1,25 @@
+@use "../../scss/variables" as *;
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-light-gray;
+    color: $color-gray-navy;
+    border-radius: 0.5rem;
+    width: 3.5rem;
+    margin-right: 1rem;
+    aspect-ratio: 1 / 1;
+    
+    &.html { background-color: $color-html }
+    &.css { background-color: $color-css }
+    &.javascript { background-color: $color-js }
+    &.accessibility { background-color: $color-accessibility }
+}
+
+@media (max-width: 525px) {
+    .icon {
+        width: 2.5rem;
+        border-radius: 0.25rem;
+    }
+}

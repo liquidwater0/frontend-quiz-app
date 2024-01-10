@@ -1,0 +1,18 @@
+@use "../../scss/variables" as *;
+
+.quiz-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .quiz-title {
+        font-weight: 500;
+        font-size: $fs-small;
+    }
+}
+
+@media (max-width: 525px) {
+    .quiz-title {
+        font-size: 1.125rem !important;
+    }
+}
