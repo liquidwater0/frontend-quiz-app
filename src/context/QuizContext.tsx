@@ -40,7 +40,7 @@ export default function QuizProvider({ children }: { children: ReactNode }) {
             const fileName = quiz.icon.split("images/")[1];
             
             if (import.meta.env.PROD) {
-                iconObject[quiz.title] = `${import.meta.env.BASE_URL}/assets/${fileName}`;
+                iconObject[quiz.title] = `${import.meta.env.BASE_URL}assets/${fileName}`;
             }
 
             if (import.meta.env.DEV) {
