@@ -31,8 +31,8 @@ export default function QuizSelectDisplay() {
                                 iconStyle={quiz.title.toLowerCase()}
                                 icon={ 
                                     <img 
-                                        src={icons[quiz.title]} 
-                                        alt={`${icons[quiz.title]} icon`}
+                                        src={icons[quiz.title].toLowerCase()} 
+                                        alt={`${icons[quiz.title].toLowerCase()} icon`}
                                     /> 
                                 } 
                             />

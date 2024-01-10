@@ -17,8 +17,8 @@ export default function QuizTitle({ className, ...props }: QuizTitleProps) {
                 iconStyle={selectedQuiz?.title.toLowerCase()}
                 icon={ 
                     <img 
-                        src={icons[selectedQuiz!.title]} 
-                        alt={`${icons[selectedQuiz!.title]} icon`}
+                        src={icons[selectedQuiz!.title].toLowerCase()} 
+                        alt={`${icons[selectedQuiz!.title].toLowerCase()} icon`}
                     /> 
                 } 
             />
