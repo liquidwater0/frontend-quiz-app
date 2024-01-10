@@ -25,8 +25,6 @@ function App() {
 
 	return (
 		<>
-			<Background theme={theme}/>
-
 			<header className="container">
 				{
 					selectedQuiz !== null &&
@@ -41,7 +39,7 @@ function App() {
 					/>
 					<Switch
 						checked={theme === "dark"}
-						aria-label="theme switch"
+						aria-label="dark theme switch"
 						onSwitchChange={checked => setTheme(checked ? "dark" : "light")}
 						ref={themeSwitchRef}
 					/>
@@ -53,6 +51,8 @@ function App() {
 				</div>
 			</header>
 			<main className="container">
+				<Background theme={theme}/>
+				
 				{
 					quizComplete ? (
 						<ScoreDisplay />

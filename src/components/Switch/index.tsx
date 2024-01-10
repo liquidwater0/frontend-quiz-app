@@ -34,12 +34,17 @@ function Switch(
 
     return (
         <button 
+            type="button"
             className={`switch ${className ? className : ""}`}
             role="switch"
             aria-checked={isChecked}
             onClick={handleSwitchToggle}
             { ...props }
-        ></button>
+        >
+            <span aria-hidden="true">
+                { isChecked ? "on" : "off" }
+            </span>
+        </button>
     );
 }
 
