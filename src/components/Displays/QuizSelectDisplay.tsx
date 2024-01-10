@@ -32,7 +32,7 @@ export default function QuizSelectDisplay() {
                                 icon={ 
                                     <img 
                                         src={icons[quiz.title.toLowerCase()]} 
-                                        alt={`${icons[quiz.title.toLowerCase()]} icon`}
+                                        alt={`${quiz.title.toLowerCase()} icon`}
                                     /> 
                                 } 
                             />
