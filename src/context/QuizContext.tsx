@@ -1,7 +1,11 @@
 import data from "../data.json";
-import { htmlIcon, cssIcon, jsIcon, accessibilityIcon } from "../quizIcons";
 import { useState, useContext, createContext } from "react";
 import type { SetStateAction, Dispatch, ReactNode } from "react";
+
+import htmlIcon from "../assets/images/icon-html.svg";
+import cssIcon from "../assets/images/icon-css.svg";
+import jsIcon from "../assets/images/icon-js.svg";
+import accessibilityIcon from "../assets/images/icon-accessibility.svg";
 
 type QuizData = typeof data;
 type Quiz = QuizData["quizzes"][0];
