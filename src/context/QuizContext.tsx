@@ -1,5 +1,5 @@
 import data from "../data.json";
-import "../icons";
+import {} from "../icons";
 import { useState, useContext, createContext } from "react";
 import type { SetStateAction, Dispatch, ReactNode } from "react";
 
