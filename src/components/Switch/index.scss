@@ -10,12 +10,6 @@
     border: none;
     cursor: pointer;
 
-    [aria-hidden="true"] {
-        position: absolute;
-        opacity: 0;
-        user-select: none;
-    }
-
     &::after {
         content: "";
         position: absolute;

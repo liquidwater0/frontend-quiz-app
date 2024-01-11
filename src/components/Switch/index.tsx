@@ -40,11 +40,7 @@ function Switch(
             aria-checked={isChecked}
             onClick={handleSwitchToggle}
             { ...props }
-        >
-            <span aria-hidden="true">
-                { isChecked ? "on" : "off" }
-            </span>
-        </button>
+        ></button>
     );
 }
 
